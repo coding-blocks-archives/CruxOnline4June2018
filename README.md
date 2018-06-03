@@ -1,5 +1,5 @@
 # CruxOnline4June2018
-Crux Online 4June2018 Codes
+Codes for Crux Online 4June2018 Batch
 
 ### Assignment Submission (Hacker Blocks) :
 Students need to submit the assignments on <a href="https://hack.codingblocks.com/contests/c/467"> this </a> link.
