@@ -24,12 +24,12 @@ public class Pattern18 {
 
 			// spaces work
 			for (int csp = 1; csp <= nsp; csp++) {
-				System.out.print("\t");
+				System.out.print(" ");
 			}
 
 			// star work
 			for (int cst = 1; cst <= nst; cst++) {
-				System.out.print("*\t");
+				System.out.print("*");
 			}
 
 			// prep
