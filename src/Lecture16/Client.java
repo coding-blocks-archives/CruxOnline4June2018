@@ -1,6 +1,6 @@
-package Lecture20;
+package Lecture16;
 
-public class client {
+public class Client {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -16,19 +16,18 @@ public class client {
 
 		trie.display();
 
-//		System.out.println(trie.search("art"));
-//		System.out.println(trie.search("arts"));
-//		System.out.println(trie.search("arpit"));
-		
+		// System.out.println(trie.search("art"));
+		// System.out.println(trie.search("arts"));
+		// System.out.println(trie.search("arpit"));
+
 		System.out.println("*********************");
-		
+
 		trie.remove("arts");
 		trie.remove("art");
 		trie.display();
-		
+
 		System.out.println(trie.numWords());
-		
-		
+
 	}
 
 }
