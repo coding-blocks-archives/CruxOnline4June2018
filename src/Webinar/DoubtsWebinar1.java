@@ -1,9 +1,9 @@
-package Webinar1;
+package Webinar;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Doubts {
+public class DoubtsWebinar1 {
 
 	public static void main(String[] args) {
 
