@@ -14,12 +14,46 @@ public class BinaryTree {
 			this.left = left;
 			this.right = right;
 		}
+
+		public Node() {
+
+		}
 	}
 
 	private Node root = null;
 	private int size = 0;
 
-	BinaryTree() {
+	public BinaryTree(int[] pre, int[] in) {
+
+		this.root = construct(pre, 0, pre.length - 1, in, 0, in.length - 1);
+	}
+
+	private Node construct(int[] pre, int plo, int phi, int[] in, int ilo, int ihi) {
+
+		if (plo > phi) {
+			return null;
+		}
+
+		Node nn = new Node();
+		nn.data = pre[plo];
+
+		int si = -1;
+		for (int i = ilo; i <= ihi; i++) {
+			if (pre[plo] == in[i]) {
+				si = i;
+				break;
+			}
+		}
+
+		int nel = si - ilo;
+
+		nn.left = construct(pre, plo + 1, plo + nel, in, ilo, si - 1);
+		nn.right = construct(pre, plo + nel + 1, phi, in, si + 1, ihi);
+
+		return nn;
+	}
+
+	public BinaryTree() {
 		Scanner s = new Scanner(System.in);
 		this.root = takeInput(s, null, false);
 	}

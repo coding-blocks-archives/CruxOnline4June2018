@@ -23,6 +23,41 @@ public class DynamicStackClient {
 			stack.pop();
 		}
 		// stack.pop();
+
+		int[] arr = { 50, 35, 10, 45, 60, 47, 30, 37, 80 };
+		int[] ans = stockSpan(arr);
+
+		for (int val : ans) {
+			System.out.print(val + " ");
+		}
+		System.out.println();
+	}
+
+	// Assignments
+	public static int[] stockSpan(int[] prices) throws Exception {
+
+		int[] span = new int[prices.length];
+
+		DynamicStack stack = new DynamicStack();
+
+		for (int i = 0; i < prices.length; i++) {
+
+			while (!stack.isEmpty() && prices[stack.top()] < prices[i]) {
+				stack.pop();
+			}
+
+			if (stack.isEmpty()) {
+				span[i] = i + 1;
+			} else {
+				span[i] = i - stack.top();
+			}
+
+			stack.push(i);
+
+		}
+
+		return span;
+
 	}
 
 }

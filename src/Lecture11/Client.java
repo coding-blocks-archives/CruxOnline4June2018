@@ -26,7 +26,7 @@ public class Client {
 		list.addLast(200);
 		list.addLast(300);
 		list.display();
-		 System.out.println(list.removeAt(3));
+		System.out.println(list.removeAt(3));
 		list.display();
 
 		list.reverseData();
@@ -36,6 +36,18 @@ public class Client {
 		list.display();
 
 		System.out.println(list.mid());
+
+		list.addLast(400);
+		list.addLast(500);
+		list.addLast(600);
+		list.addLast(700);
+		list.addLast(800);
+
+		list.display();
+
+		list.kReverse(3);
+		list.display();
+
 	}
 
 }
