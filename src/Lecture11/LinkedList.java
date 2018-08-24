@@ -326,4 +326,26 @@ public class LinkedList {
 
 	}
 
+	public void kAppend(int k) throws Exception {
+
+		k = k % this.size;
+
+		if (k < 0) {
+			k = k + this.size;
+		}
+
+		if (k == 0) {
+			return;
+		}
+		Node nt = getNodeAt(size - k - 1);
+		Node nh = nt.next;
+
+		// linking
+		tail.next = this.head;
+		nt.next = null;
+		this.head = nh;
+		this.tail = nt;
+
+	}
+
 }

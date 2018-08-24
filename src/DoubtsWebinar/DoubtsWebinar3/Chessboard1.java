@@ -1,4 +1,4 @@
-package Webinar.DoubtsWebinar3;
+package DoubtsWebinar.DoubtsWebinar3;
 
 import java.util.Scanner;
 

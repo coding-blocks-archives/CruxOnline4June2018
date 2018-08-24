@@ -1,4 +1,4 @@
-package Webinar;
+package DoubtsWebinar;
 
 import java.util.Arrays;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package Webinar;
+package DoubtsWebinar;
 
 import java.util.ArrayList;
 import java.util.Arrays;

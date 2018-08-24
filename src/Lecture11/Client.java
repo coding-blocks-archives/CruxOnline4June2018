@@ -47,6 +47,9 @@ public class Client {
 
 		list.kReverse(3);
 		list.display();
+		
+		list.kAppend(2);
+		list.display();
 
 	}
 

@@ -147,7 +147,7 @@ public class BST {
 		if (node == null) {
 			return;
 		}
-		
+
 		if (item > node.data) {
 			remove(node.right, node, false, item);
 		} else if (item < node.data) {
@@ -186,6 +186,63 @@ public class BST {
 				remove(node.left, node, true, max);
 			}
 		}
+
+	}
+
+	// print till k
+
+	public void printTillK(int k, int target) {
+		printTillK(this.root, k, target);
+	}
+
+	private int printTillK(Node node, int k, int target) {
+
+		if (node == null) {
+			return -1;
+		}
+
+		if (node.data == target) {
+			printKDown(node, k, 0);
+			return 0;
+		}
+
+		int ld = printTillK(node.left, k, target);
+
+		if (ld != -1) {
+
+			if (ld + 1 == k) {
+				System.out.println(node.data);
+			} else {
+				printKDown(node.right, k - ld - 2, 0);
+			}
+			return ld + 1;
+		}
+
+		int rd = printTillK(node.right, k, target);
+
+		if (rd != -1) {
+
+			if (rd + 1 == k) {
+				System.out.println(node.data);
+			} else {
+				printKDown(node.left, k - rd - 2, 0);
+			}
+			return rd + 1;
+		}
+
+		return -1;
+	}
+
+	private void printKDown(Node node, int level, int count) {
+
+		if (node == null) {
+			return;
+		}
+		if (level == count) {
+			System.out.println(node.data);
+		}
+		printKDown(node.left, level, count + 1);
+		printKDown(node.right, level, count + 1);
 
 	}
 
